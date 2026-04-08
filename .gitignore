@@ -1,0 +1,86 @@
+# Foundry
+out/
+cache/
+broadcast/
+.gas-snapshot
+cache_forge/
+
+# Foundry build artifacts that may appear in subdirs
+**/out/
+**/cache/
+
+# Keep deployment receipts but ignore dry-run and sensitive broadcast logs
+broadcast/**/dry-run/
+
+# Node / TypeScript (sdk + examples)
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+build/
+*.tsbuildinfo
+.npm/
+.pnpm-store/
+.yarn/
+.eslintcache
+
+# Package manager logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Coverage
+coverage/
+lcov.info
+*.lcov
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.env
+.envrc
+
+# Keys, wallets, signing material
+*.key
+*.pem
+*.crt
+*.pfx
+*.p12
+*.seed
+*.mnemonic
+*keypair*
+*wallet*
+*secret*
+keystore/
+keys/
+
+# Editor and IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.history/
+
+# OS cruft
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Logs and temp
+*.log
+logs/
+tmp/
+.tmp/
+*.tmp
+
+# Docs build output
+docs/.vitepress/cache/
+docs/.vitepress/dist/
