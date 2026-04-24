@@ -158,3 +158,4 @@ contract WaneDelegate {
         return policy.evaluate(address(this), target, amount);
     }
 }
+
