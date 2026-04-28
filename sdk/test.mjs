@@ -150,3 +150,4 @@ function waneDelegateAbiFromBuild() {
     outputs: [{ name: "ret", type: "bytes" }],
   }];
 }
+
