@@ -342,3 +342,4 @@ A full agent integration enrolls in `WanePolicy`, optionally delegates its
 wallet to `WaneDelegate` via EIP-7702, and routes outbound actions through
 `execute()` so every action is screened against both the per-agent scope and the
 shared antibody memory before it runs.
+
