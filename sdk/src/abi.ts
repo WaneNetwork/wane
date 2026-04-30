@@ -196,3 +196,4 @@ export const erc20ApproveAbi = [
     outputs: [{ name: "", type: "bool" }],
   },
 ] as const;
+
