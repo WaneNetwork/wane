@@ -38,3 +38,4 @@ library WaneTypes {
         bytes32 evidence; //   hash of off-chain evidence (tx, payload, report)
     }
 }
+
