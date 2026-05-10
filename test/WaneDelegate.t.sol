@@ -110,4 +110,3 @@ contract WaneDelegateTest is Test {
         assertEq(address(del).balance, 0.7 ether, "remainder stays with wallet");
     }
 }
-
