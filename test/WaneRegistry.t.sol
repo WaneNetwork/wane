@@ -258,3 +258,4 @@ contract WaneRegistryTest is Test {
         (x,) = reg.checkAddress(a);
     }
 }
+
