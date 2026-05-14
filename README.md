@@ -201,4 +201,3 @@ Website: https://wane.network
 X: https://x.com/wane_protocol
 GitHub: https://github.com/WaneNetwork/wane
 Contract: https://basescan.org/address/0x027F371fB139A57EcD2A2E175d30157eEA1C56de
-
