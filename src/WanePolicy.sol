@@ -328,4 +328,3 @@ contract WanePolicy {
         return corrobs >= minCorrobs;
     }
 }
-
