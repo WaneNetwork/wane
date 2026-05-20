@@ -834,4 +834,3 @@ function defaultIsAttack(err: unknown): boolean {
     m.includes("tool poisoning")
   );
 }
-
