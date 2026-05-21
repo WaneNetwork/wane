@@ -75,4 +75,3 @@ The Wane contracts have not undergone a third-party security audit. The code is 
 ## Disclosure of Past Issues
 
 Resolved security advisories are published under the Security tab of the repository. Each advisory includes the affected versions, the fix, and credit to the reporter where applicable.
-
