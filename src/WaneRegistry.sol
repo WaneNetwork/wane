@@ -395,4 +395,3 @@ contract WaneRegistry is ReentrancyGuard {
         return keccak256(abi.encodePacked(kind, subject));
     }
 }
-
