@@ -62,4 +62,3 @@ contract WaneHookTest is Test {
         hook.beforeSwap(alice, key, params, "");
     }
 }
-

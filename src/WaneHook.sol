@@ -170,4 +170,3 @@ contract WaneHook is IHooks {
         return IHooks.afterDonate.selector;
     }
 }
-

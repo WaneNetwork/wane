@@ -197,4 +197,3 @@ contract WanePolicyTest is Test {
         assertTrue(ok);
     }
 }
-
