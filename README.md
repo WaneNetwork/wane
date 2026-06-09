@@ -1,5 +1,7 @@
 <div align="center">
 
+<img alt="Wane" src=".github/assets/banner.png" width="100%">
+
 <h1>Wane</h1>
 
 <p><b>Shared on-chain immune memory for AI agents.</b></p>
