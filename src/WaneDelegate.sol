@@ -4,10 +4,7 @@ pragma solidity ^0.8.27;
 import { WaneTypes } from "./WaneTypes.sol";
 
 interface IWaneRegistryView {
-    function check(WaneTypes.ThreatKind kind, bytes32 subject)
-        external
-        view
-        returns (bool active, uint64 id);
+    function check(WaneTypes.ThreatKind kind, bytes32 subject) external view returns (bool active, uint64 id);
     function antibodies(uint64 id)
         external
         view
@@ -25,10 +22,7 @@ interface IWaneRegistryView {
 }
 
 interface IWanePolicyView {
-    function evaluate(address agent, address target, uint128 amount)
-        external
-        view
-        returns (bool allowed, uint8 reason);
+    function evaluate(address agent, address target, uint128 amount) external view returns (bool allowed, uint8 reason);
     function evaluateCall(address agent, address target, bytes4 selector, uint128 amount)
         external
         view
@@ -82,14 +76,14 @@ contract WaneDelegate {
     ///         RECEIVE funds. Wane only screens OUTBOUND actions (those routed
     ///         through execute()); incoming transfers are never the wallet's own
     ///         action, so they pass untouched.
-    receive() external payable {}
+    receive() external payable { }
 
     /// @notice Accept inbound calls with data (e.g. a contract calling back into
     ///         the wallet). Same rationale as receive(): inbound is not an action
     ///         the wallet initiated, so there is nothing to screen. Without this,
     ///         the 7702 set-code tx itself (a self-call with empty data) would
     ///         revert and the wallet could never be reached.
-    fallback() external payable {}
+    fallback() external payable { }
 
     /// @notice Screen + execute a single action from the delegated wallet.
     ///         `address(this)` is the wallet itself under 7702, so the call runs
@@ -107,11 +101,12 @@ contract WaneDelegate {
     }
 
     /// @notice Screen + execute a batch. Any flagged target reverts the whole batch.
-    function executeBatch(
-        address[] calldata targets,
-        uint256[] calldata values,
-        bytes[] calldata datas
-    ) external payable onlySelf returns (bytes[] memory rets) {
+    function executeBatch(address[] calldata targets, uint256[] calldata values, bytes[] calldata datas)
+        external
+        payable
+        onlySelf
+        returns (bytes[] memory rets)
+    {
         uint256 n = targets.length;
         if (values.length != n || datas.length != n) revert BatchLengthMismatch();
         rets = new bytes[](n);

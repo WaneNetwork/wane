@@ -4,10 +4,7 @@ pragma solidity ^0.8.27;
 import { WaneTypes } from "./WaneTypes.sol";
 
 interface IWaneRegistryView {
-    function check(WaneTypes.ThreatKind kind, bytes32 subject)
-        external
-        view
-        returns (bool active, uint64 id);
+    function check(WaneTypes.ThreatKind kind, bytes32 subject) external view returns (bool active, uint64 id);
     function antibodies(uint64 id)
         external
         view
@@ -88,7 +85,15 @@ contract WanePolicy {
     mapping(address => bool) public globalDenied; // curated bad recipients (all agents)
 
     event AgentEnrolled(address indexed agent, address indexed owner);
-    event PolicySet(address indexed agent, bool enabled, uint8 blockKinds, uint32 minCorrobs, uint128 perTxCap, uint128 dailyCap, uint40 expiresAt);
+    event PolicySet(
+        address indexed agent,
+        bool enabled,
+        uint8 blockKinds,
+        uint32 minCorrobs,
+        uint128 perTxCap,
+        uint128 dailyCap,
+        uint40 expiresAt
+    );
     event PausedSet(address indexed agent, bool paused, address by);
     event GlobalPausedSet(bool paused);
     event GlobalDeniedSet(address indexed target, bool value);
@@ -224,11 +229,7 @@ contract WanePolicy {
     /* ── evaluate: the layer reads this before the agent acts ────────── */
 
     /// @notice Value-only check (native send / generic target). Pure view, free.
-    function evaluate(address agent, address target, uint128 amount)
-        public
-        view
-        returns (bool allowed, uint8 reason)
-    {
+    function evaluate(address agent, address target, uint128 amount) public view returns (bool allowed, uint8 reason) {
         return _evaluate(agent, target, 0x00000000, amount, false);
     }
 
@@ -242,13 +243,11 @@ contract WanePolicy {
         return _evaluate(agent, target, selector, amount, true);
     }
 
-    function _evaluate(
-        address agent,
-        address target,
-        bytes4 selector,
-        uint128 amount,
-        bool haveSelector
-    ) internal view returns (bool, uint8) {
+    function _evaluate(address agent, address target, bytes4 selector, uint128 amount, bool haveSelector)
+        internal
+        view
+        returns (bool, uint8)
+    {
         Policy storage p = policies[agent];
         if (p.owner == address(0) || !p.enabled) return (true, R_OK);
 
@@ -273,8 +272,7 @@ contract WanePolicy {
 
         // antibody checks
         if (p.blockKinds & K_ADDRESS != 0) {
-            (bool fa, uint64 ida) =
-                registry.check(WaneTypes.ThreatKind.Address, bytes32(uint256(uint160(target))));
+            (bool fa, uint64 ida) = registry.check(WaneTypes.ThreatKind.Address, bytes32(uint256(uint160(target))));
             if (fa && _meetsSensitivity(ida, p.minCorrobs)) return (false, R_ANTIBODY);
         }
         if (p.blockKinds & K_BYTECODE != 0 && target.code.length > 0) {

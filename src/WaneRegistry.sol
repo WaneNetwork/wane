@@ -36,10 +36,10 @@ contract WaneRegistry is ReentrancyGuard {
     uint96 public mintStake = 100e18; //    $WANE locked to mint an antibody
     uint96 public challengeStake = 200e18; // $WANE to challenge
     uint64 public maturity = 21_600; //     ~72h @ 2s blocks: stake reclaimable
-    uint64 public enforceWindow = 1_800; // ~1h: blocks before an unchallenged,
-        //                                    un-corroborated antibody enforces
+    uint64 public enforceWindow = 1800; // ~1h: blocks before an unchallenged,
+    //                                    un-corroborated antibody enforces
     uint32 public enforceCorrobs = 2; //    OR this many corroborations to enforce now
-    uint16 public publisherBps = 8_000; //  80% of check fees to publisher
+    uint16 public publisherBps = 8000; //  80% of check fees to publisher
     uint96 public checkFee; //              optional metered-check fee (0 = free)
 
     /* ── state ───────────────────────────────────────────────────────── */
@@ -116,11 +116,7 @@ contract WaneRegistry is ReentrancyGuard {
 
     /// @notice Is `subject` of `kind` covered by an ENFORCEABLE antibody?
     ///         Free, view. Reading is immunity. Returns false while paused.
-    function check(WaneTypes.ThreatKind kind, bytes32 subject)
-        public
-        view
-        returns (bool active, uint64 id)
-    {
+    function check(WaneTypes.ThreatKind kind, bytes32 subject) public view returns (bool active, uint64 id) {
         if (paused) return (false, 0);
         id = idByKey[_key(kind, subject)];
         if (id == 0) return (false, 0);

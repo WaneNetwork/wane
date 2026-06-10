@@ -92,8 +92,12 @@ contract WaneDelegateTest is Test {
         address[] memory t = new address[](2);
         uint256[] memory v = new uint256[](2);
         bytes[] memory d = new bytes[](2);
-        t[0] = friend; v[0] = 0.1 ether; d[0] = "";
-        t[1] = drainer; v[1] = 0; d[1] = "";
+        t[0] = friend;
+        v[0] = 0.1 ether;
+        d[0] = "";
+        t[1] = drainer;
+        v[1] = 0;
+        d[1] = "";
         vm.expectRevert(abi.encodeWithSelector(WaneDelegate.Blocked.selector, drainer, pol.R_ANTIBODY()));
         vm.prank(address(del));
         del.executeBatch(t, v, d);

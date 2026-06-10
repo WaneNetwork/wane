@@ -9,10 +9,7 @@ import { BeforeSwapDelta, BeforeSwapDeltaLibrary } from "v4-core/src/types/Befor
 import { WaneTypes } from "./WaneTypes.sol";
 
 interface IWaneCheck {
-    function check(WaneTypes.ThreatKind kind, bytes32 subject)
-        external
-        view
-        returns (bool active, uint64 id);
+    function check(WaneTypes.ThreatKind kind, bytes32 subject) external view returns (bool active, uint64 id);
     function checkAddress(address target) external view returns (bool active, uint64 id);
 }
 
@@ -100,11 +97,7 @@ contract WaneHook is IHooks {
         return IHooks.beforeInitialize.selector;
     }
 
-    function afterInitialize(address, PoolKey calldata, uint160, int24)
-        external
-        pure
-        returns (bytes4)
-    {
+    function afterInitialize(address, PoolKey calldata, uint160, int24) external pure returns (bytes4) {
         return IHooks.afterInitialize.selector;
     }
 
@@ -154,19 +147,11 @@ contract WaneHook is IHooks {
         return (IHooks.afterSwap.selector, 0);
     }
 
-    function beforeDonate(address, PoolKey calldata, uint256, uint256, bytes calldata)
-        external
-        pure
-        returns (bytes4)
-    {
+    function beforeDonate(address, PoolKey calldata, uint256, uint256, bytes calldata) external pure returns (bytes4) {
         return IHooks.beforeDonate.selector;
     }
 
-    function afterDonate(address, PoolKey calldata, uint256, uint256, bytes calldata)
-        external
-        pure
-        returns (bytes4)
-    {
+    function afterDonate(address, PoolKey calldata, uint256, uint256, bytes calldata) external pure returns (bytes4) {
         return IHooks.afterDonate.selector;
     }
 }

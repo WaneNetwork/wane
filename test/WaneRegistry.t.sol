@@ -102,8 +102,7 @@ contract WaneRegistryTest is Test {
 
     function test_FalseFlagSlashedOnResolve() public {
         vm.prank(eve);
-        uint64 id =
-            reg.mintAntibody(WaneTypes.ThreatKind.Address, _subj(victim), keccak256("lie"));
+        uint64 id = reg.mintAntibody(WaneTypes.ThreatKind.Address, _subj(victim), keccak256("lie"));
 
         uint256 carolBefore = token.balanceOf(carol);
         vm.prank(carol);

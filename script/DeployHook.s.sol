@@ -21,10 +21,7 @@ contract DeployHook is Script {
         address pm = vm.envAddress("V4_POOL_MANAGER");
         address guardian = vm.envAddress("GUARDIAN");
 
-        bytes memory creation = abi.encodePacked(
-            type(WaneHook).creationCode,
-            abi.encode(registry, pm, guardian)
-        );
+        bytes memory creation = abi.encodePacked(type(WaneHook).creationCode, abi.encode(registry, pm, guardian));
         bytes32 initHash = keccak256(creation);
 
         // mine salt: address low 14 bits must equal FLAGS exactly
@@ -54,8 +51,6 @@ contract DeployHook is Script {
     }
 
     function _create2Addr(bytes32 salt, bytes32 initHash) internal pure returns (address) {
-        return address(
-            uint160(uint256(keccak256(abi.encodePacked(bytes1(0xff), CREATE2, salt, initHash))))
-        );
+        return address(uint160(uint256(keccak256(abi.encodePacked(bytes1(0xff), CREATE2, salt, initHash)))));
     }
 }
