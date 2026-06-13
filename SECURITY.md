@@ -30,7 +30,7 @@ Do not open a public GitHub issue for security vulnerabilities. Public disclosur
 
 Use one of the following private channels:
 
-1. GitHub private vulnerability reporting. Go to the Security tab of the repository at https://wane.network/ and click "Report a vulnerability". This opens a private advisory visible only to maintainers.
+1. GitHub private vulnerability reporting. Go to the Security tab of the repository at https://github.com/WaneNetwork/wane and click "Report a vulnerability". This opens a private advisory visible only to maintainers.
 2. Email. Send details to security@wane.network. Use the PGP key published at https://wane.network/.well-known/security.txt if you need to encrypt the report.
 
 Please include as much of the following as you can:

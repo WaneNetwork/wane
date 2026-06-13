@@ -203,5 +203,5 @@ MIT. See [LICENSE](LICENSE).
 
 Website: https://wane.network
 X: https://x.com/wanedotnetwork
-GitHub: https://wane.network/
+GitHub: https://github.com/WaneNetwork/wane
 Contract: https://basescan.org/address/0x027F371fB139A57EcD2A2E175d30157eEA1C56de
