@@ -7,6 +7,10 @@
 <p><b>Shared on-chain immune memory and policy firewall for AI agents.</b></p>
 
 <p>
+<img alt="CI" src="https://img.shields.io/github/actions/workflow/status/WaneNetwork/wane/ci.yml?branch=main&style=for-the-badge&label=ci">
+<img alt="Tests" src="https://img.shields.io/badge/tests-41%20passing-3FB950?style=for-the-badge">
+</p>
+<p>
 <img alt="Network" src="https://img.shields.io/badge/network-Base%20mainnet-4F30D6?style=for-the-badge">
 <img alt="Chain ID" src="https://img.shields.io/badge/chainid-8453-5B3FE0?style=for-the-badge">
 <img alt="Solidity" src="https://img.shields.io/badge/solidity-0.8.27-6A4BE8?style=for-the-badge">
@@ -67,21 +71,26 @@ flowchart TD
 
 ## Build
 
-Reading the registry needs nothing but a public Base RPC. Building the contracts and SDK from source:
+Dependencies (forge-std, OpenZeppelin, Uniswap v4-core) are pinned git submodules, the Foundry default, so clone with `--recurse-submodules`. Reading the registry needs nothing but a public Base RPC. Building the contracts and SDK from source:
 
 ```bash
-git clone https://github.com/WaneNetwork/wane.git
+git clone --recurse-submodules https://github.com/WaneNetwork/wane.git
 cd wane
 
 # contracts
 forge build
+forge test
 
 # sdk
 cd sdk
 tsc
 ```
 
+Already cloned without submodules? Run `git submodule update --init --recursive` first.
+
 [Foundry](https://book.getfoundry.sh/) is required for the contracts. The SDK needs Node 18+ and a TypeScript 5 toolchain; `viem` is a peer dependency.
+
+The original code lives in `src/` (six contracts, ~1,100 lines) and `sdk/`; everything under `lib/` is a vendored upstream dependency. The contracts ship with 41 passing Foundry tests.
 
 ## Quick start
 
