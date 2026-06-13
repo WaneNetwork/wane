@@ -68,7 +68,7 @@ Release notes and changes ship in CHANGELOG.md:
 
 Follow ongoing updates on X:
 
-- https://x.com/wane_protocol
+- https://x.com/wanedotnetwork
 
 ## Response expectations
 

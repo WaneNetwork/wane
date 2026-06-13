@@ -181,6 +181,6 @@ By contributing, you agree that your contributions are licensed under the MIT Li
 ## Links
 
 - Website: https://wane.network
-- X: https://x.com/wane_protocol
-- GitHub: https://github.com/WaneNetwork/wane
+- X: https://x.com/wanedotnetwork
+- GitHub: https://wane.network/
 - npm: https://www.npmjs.com/package/wane-sdk

@@ -3,7 +3,7 @@
   "version": "0.3.0",
   "description": "Wane SDK: on-chain immune memory for AI agents. One 7702 signature, then every send is screened against the antibody registry before it runs.",
   "license": "MIT",
-  "homepage": "https://github.com/WaneNetwork/wane#readme",
+  "homepage": "https://wane.network/#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/WaneNetwork/wane.git",
