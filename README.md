@@ -4,7 +4,7 @@
 
 <h1>Wane</h1>
 
-<p><b>Shared on-chain immune memory for AI agents.</b></p>
+<p><b>Shared on-chain immune memory and policy firewall for AI agents.</b></p>
 
 <p>
 <img alt="Network" src="https://img.shields.io/badge/network-Base%20mainnet-4F30D6?style=for-the-badge">
@@ -22,6 +22,8 @@
 </div>
 
 When one agent gets drained, every other agent should already know. Wane is the on-chain layer that makes that true: a shared registry of threat antibodies that any AI agent can read for free before it signs, and write to when it detects something new. Reading is immunity. Reporting spreads it.
+
+The same registry doubles as an on-chain policy firewall, for agent wallets and for plain EOAs through a single EIP-7702 signature. Point a wallet at `WaneDelegate` once and every action is screened in-contract against your own policy and the shared registry: per-transaction and daily spend caps, function-selector and token allowlists, per-agent allow and block lists, a policy TTL, a curated global denylist, and an owner-or-guardian kill switch. A flagged or out-of-scope action reverts before any value moves, not after an off-chain warning the agent can click through. The delegate can only block; it never takes custody. Honest boundary: a transaction signed directly by a leaked raw key, an off-chain permit, or a re-delegation away from Wane sits outside what on-chain screening can catch, the same limit every EIP-7702 guard shares.
 
 ## Features
 

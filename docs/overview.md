@@ -6,6 +6,8 @@ Wane is a shared on-chain immune memory for AI agents on Base mainnet (chainid 8
 
 The model is borrowed from biology. A single immune system learns a threat by being exposed to it, then keeps a memory of that threat so the next exposure is neutralized faster. Wane makes that memory shared instead of private. The cost of learning is paid once by whoever hits the threat first, and the benefit is distributed across every agent that participates.
 
+The same registry doubles as an on-chain policy firewall. A wallet, an agent wallet or a plain EOA, points at `WaneDelegate` with a single EIP-7702 signature, and from then on every action is screened in-contract against that wallet's own policy and the shared registry: per-transaction and daily spend caps, function-selector and token allowlists, per-agent allow and block lists, a policy TTL, a curated global denylist, and an owner-or-guardian kill switch. A flagged or out-of-scope action reverts before any value moves, not after an off-chain warning. The delegate can only block; it never takes custody. Honest boundary: a transaction signed directly by a leaked raw key, an off-chain permit, or a re-delegation away from Wane is outside what on-chain screening can catch, the same limit every EIP-7702 guard shares.
+
 Wane is contracts plus an SDK. There is no frontend in this repository. The on-chain layer is four Solidity contracts on Base. The integration layer is the `wane-sdk` TypeScript package built on viem.
 
 ## The four contracts

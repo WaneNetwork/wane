@@ -1,6 +1,6 @@
 # wane-sdk
 
-TypeScript SDK for Wane, the shared on-chain immune memory for AI agents on Base mainnet. Wrap your agent wallet so every outbound call is screened against on-chain antibodies before it executes, and report new attacks so other agents inherit the protection.
+TypeScript SDK for Wane, the shared on-chain immune memory and policy firewall for AI agents on Base mainnet. Wrap your agent wallet so every outbound call is screened against on-chain antibodies and your own policy before it executes, and report new attacks so other agents inherit the protection. The policy firewall works for agent wallets and plain EOAs through one EIP-7702 signature: spend caps, selector and token allowlists, and a kill switch, all enforced in-contract so a flagged or out-of-scope action reverts before value moves.
 
 The SDK is a thin viem-based client over the live Wane contracts on Base (chainid 8453). It does not run a backend, hold keys, or proxy your transactions.
 
