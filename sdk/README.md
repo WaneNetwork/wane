@@ -9,7 +9,7 @@ The SDK is a thin viem-based client over the live Wane contracts on Base (chaini
 This package is distributed by source. Clone the monorepo and build the SDK in place.
 
 ```bash
-git clone https://github.com/WaneNetwork/wane.git
+git clone https://github.com/WaneProtocol/wane-base.git
 cd wane/sdk
 tsc
 ```
@@ -105,7 +105,7 @@ These are the defaults the SDK uses when no overrides are passed to the `Wane` c
 
 - Website: https://wane.network
 - X: https://x.com/wanedotnetwork
-- GitHub: https://github.com/WaneNetwork/wane
+- GitHub: https://github.com/WaneProtocol/wane-base
 - Registry contract: https://basescan.org/address/0x027F371fB139A57EcD2A2E175d30157eEA1C56de
 
 ## License

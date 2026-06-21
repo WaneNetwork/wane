@@ -7,7 +7,7 @@
 <p><b>Shared on-chain immune memory and policy firewall for AI agents.</b></p>
 
 <p>
-<img alt="CI" src="https://img.shields.io/github/actions/workflow/status/WaneNetwork/wane/ci.yml?branch=main&style=for-the-badge&label=ci">
+<img alt="CI" src="https://img.shields.io/github/actions/workflow/status/WaneProtocol/wane-base/ci.yml?branch=main&style=for-the-badge&label=ci">
 <img alt="Tests" src="https://img.shields.io/badge/tests-41%20passing-3FB950?style=for-the-badge">
 </p>
 <p>
@@ -74,7 +74,7 @@ flowchart TD
 Dependencies (forge-std, OpenZeppelin, Uniswap v4-core) are pinned git submodules, the Foundry default, so clone with `--recurse-submodules`. Reading the registry needs nothing but a public Base RPC. Building the contracts and SDK from source:
 
 ```bash
-git clone --recurse-submodules https://github.com/WaneNetwork/wane.git
+git clone --recurse-submodules https://github.com/WaneProtocol/wane-base.git
 cd wane
 
 # contracts
@@ -212,5 +212,5 @@ MIT. See [LICENSE](LICENSE).
 
 Website: https://wane.network
 X: https://x.com/wanedotnetwork
-GitHub: https://github.com/WaneNetwork/wane
+GitHub: https://github.com/WaneProtocol/wane-base
 Contract: https://basescan.org/address/0x027F371fB139A57EcD2A2E175d30157eEA1C56de

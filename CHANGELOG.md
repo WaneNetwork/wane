@@ -60,8 +60,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Foundry project scaffold (`foundry.toml`, remappings) with the initial registry and token test suites under `test/`.
 - `script/Deploy.s.sol` initial deploy script for registry and token.
 
-[Unreleased]: https://github.com/WaneNetwork/wane/compare/v0.4.0...HEAD
-[0.4.0]: https://github.com/WaneNetwork/wane/compare/v0.3.0...v0.4.0
-[0.3.0]: https://github.com/WaneNetwork/wane/compare/v0.2.0...v0.3.0
-[0.2.0]: https://github.com/WaneNetwork/wane/compare/v0.1.0...v0.2.0
-[0.1.0]: https://github.com/WaneNetwork/wane/releases/tag/v0.1.0
+[Unreleased]: https://github.com/WaneProtocol/wane-base/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/WaneProtocol/wane-base/compare/v0.3.0...v0.4.0
+[0.3.0]: https://github.com/WaneProtocol/wane-base/compare/v0.2.0...v0.3.0
+[0.2.0]: https://github.com/WaneProtocol/wane-base/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/WaneProtocol/wane-base/releases/tag/v0.1.0

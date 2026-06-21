@@ -22,7 +22,7 @@ node --version
 ## Clone the repository
 
 ```bash
-git clone https://github.com/WaneNetwork/wane.git
+git clone https://github.com/WaneProtocol/wane-base.git
 cd wane
 ```
 
@@ -182,5 +182,5 @@ By contributing, you agree that your contributions are licensed under the MIT Li
 
 - Website: https://wane.network
 - X: https://x.com/wanedotnetwork
-- GitHub: https://github.com/WaneNetwork/wane
+- GitHub: https://github.com/WaneProtocol/wane-base
 - npm: https://www.npmjs.com/package/wane-sdk

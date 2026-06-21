@@ -4,8 +4,8 @@ contact_links:
     url: https://wane.network
     about: Read the Wane protocol docs, deployment addresses, and SDK usage before opening an issue.
   - name: Wane on X
-    url: https://x.com/wane_protocol
+    url: https://x.com/wanedotnetwork
     about: Follow announcements and reach the team for general questions.
   - name: Source on GitHub
-    url: https://github.com/WaneNetwork/wane
+    url: https://github.com/WaneProtocol/wane-base
     about: Browse contracts, SDK, and existing issues.

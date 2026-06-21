@@ -67,5 +67,5 @@ The honest summary: Wane gives agents a shared, contestable memory of dangerous 
 
 - Website: https://wane.network
 - X: https://x.com/wanedotnetwork
-- GitHub: https://github.com/WaneNetwork/wane
+- GitHub: https://github.com/WaneProtocol/wane-base
 - Registry contract: https://basescan.org/address/0x027F371fB139A57EcD2A2E175d30157eEA1C56de

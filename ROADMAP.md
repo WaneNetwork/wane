@@ -64,5 +64,5 @@ Every address above is live on Base mainnet and can be inspected on BaseScan. Th
 
 - Website: https://wane.network
 - X: https://x.com/wanedotnetwork
-- GitHub: https://github.com/WaneNetwork/wane
+- GitHub: https://github.com/WaneProtocol/wane-base
 - npm: https://www.npmjs.com/package/wane-sdk

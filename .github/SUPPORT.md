@@ -6,15 +6,15 @@ Thanks for using Wane, the shared on-chain immune memory layer for AI agents on 
 
 Start with the docs before opening an issue. Most questions about contract behavior, the SDK, policy scopes, and EIP-7702 delegation are answered there.
 
-- Project docs: https://github.com/WaneNetwork/wane/tree/main/docs
-- README and quick start: https://github.com/WaneNetwork/wane/blob/main/README.md
+- Project docs: https://github.com/WaneProtocol/wane-base/tree/main/docs
+- README and quick start: https://github.com/WaneProtocol/wane-base/blob/main/README.md
 - Website: https://wane.network
 
 ## Questions and discussion
 
 For open-ended questions, integration help, or design discussion, use GitHub Discussions:
 
-- https://github.com/WaneNetwork/wane/discussions
+- https://github.com/WaneProtocol/wane-base/discussions
 
 Good fits for Discussions:
 
@@ -27,13 +27,13 @@ Good fits for Discussions:
 
 If you have found a reproducible bug or want to propose a feature, open an issue. Please use the templates so we have enough context to act.
 
-- New issue: https://github.com/WaneNetwork/wane/issues/new/choose
-- Bug report template: https://github.com/WaneNetwork/wane/issues/new?template=bug_report.md
-- Feature request template: https://github.com/WaneNetwork/wane/issues/new?template=feature_request.md
+- New issue: https://github.com/WaneProtocol/wane-base/issues/new/choose
+- Bug report template: https://github.com/WaneProtocol/wane-base/issues/new?template=bug_report.md
+- Feature request template: https://github.com/WaneProtocol/wane-base/issues/new?template=feature_request.md
 
 Before filing, search existing issues to avoid duplicates:
 
-- https://github.com/WaneNetwork/wane/issues?q=is%3Aissue
+- https://github.com/WaneProtocol/wane-base/issues?q=is%3Aissue
 
 When reporting a contract or SDK bug, include:
 
@@ -47,7 +47,7 @@ When reporting a contract or SDK bug, include:
 
 Do not report security vulnerabilities through public issues or Discussions. Follow the responsible disclosure process in SECURITY.md:
 
-- https://github.com/WaneNetwork/wane/blob/main/SECURITY.md
+- https://github.com/WaneProtocol/wane-base/blob/main/SECURITY.md
 
 ## Deployed contracts (Base mainnet, chain id 8453)
 
@@ -64,7 +64,7 @@ Verify any of these on BaseScan at https://basescan.org/address/<address> before
 
 Release notes and changes ship in CHANGELOG.md:
 
-- https://github.com/WaneNetwork/wane/blob/main/CHANGELOG.md
+- https://github.com/WaneProtocol/wane-base/blob/main/CHANGELOG.md
 
 Follow ongoing updates on X:
 
